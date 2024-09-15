@@ -1,7 +1,7 @@
 # Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers
 
-## Introduction
+This is the official implementation of Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers (ECCV 2024).
 
-This is the official implementation for Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers (ECCV 2024).
+## Abstract 
 
-code will be released soon
+Recent advancements in deep learning have shown impressive results in image and video denoising, leveraging extensive pairs of noisy and noise-free data for supervision. However, the challenge of acquiring paired videos for dynamic scenes hampers the practical deployment of deep video denoising techniques. In contrast, this obstacle is less pronounced in image denoising, where paired data is more readily available. Thus, a well-trained image denoiser could serve as a reliable spatial prior for video denoising. In this paper, we propose a novel unsupervised video denoising framework, named ``**T**emporal **A**s a **P**lugin'' (TAP), which integrates tunable temporal modules into a pre-trained image denoiser. By incorporating temporal modules, our method can harness temporal information across noisy frames, complementing its power of spatial denoising. Furthermore, we introduce a progressive fine-tuning strategy that refines each temporal module using the generated *pseudo clean* video frames, progressively enhancing the network's denoising performance. Compared to other unsupervised video denoising methods, our framework demonstrates superior performance on both sRGB and raw video denoising datasets.

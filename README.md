@@ -40,12 +40,22 @@ Download [pretrained models](https://drive.google.com/drive/folders/1REk44iw0usX
 Run ```main_test_tap_crvd_indoor.py/main_test_tap_crvd_outdoor.py``` for evaluation.
 
 ## Samples
-<div>
-  <img src="./sample/crvd_outdoor_scene3_denoised.gif" alt="denoised" width="300" style="display: inline-block;"/>
-  <img src="./sample/crvd_outdoor_scene3_noisy.gif" alt="noisy" width="300" style="display: inline-block;"/>
+
+<div style="text-align: center;">
+  <img src="./sample/crvd_outdoor_scene3_denoised.gif" alt="denoised" width="400" style="display: inline-block;"/>
+  <img src="./sample/crvd_outdoor_scene3_noisy.gif" alt="noisy" width="400" style="display: inline-block;"/>
 </div>
 <br/>
-<div>
-  <img src="./sample/crvd_outdoor_scene4_denoised.gif" alt="denoised" width="300" style="display: inline-block;"/>
-  <img src="./sample/crvd_outdoor_scene4_noisy.gif" alt="noisy" width="300" style="display: inline-block;"/>
+<div style="text-align: center;">
+  <img src="./sample/crvd_outdoor_scene4_denoised.gif" alt="denoised" width="400" style="display: inline-block;"/>
+  <img src="./sample/crvd_outdoor_scene4_noisy.gif" alt="noisy" width="400" style="display: inline-block;"/>
 </div>
+
+## Train
+
+### Fine-tuning on raw videos
+Run the following command to train video denoiser on CRVD
+```
+python main_finetune_crvd_tap.py --stage 1 --pretrained_checkpoints_dir './checkpoints/nafnet/nafnet_raw.pth' --save_dir ./saves/ft_crvd_indoor/ --test_clean_vid_dir ./Datasets/video_denoising/CRVD_dataset/indoor_raw_gt/ --test_noisy_vid_dir ./Datasets/video_denoising/CRVD_dataset/indoor_raw_noisy/ --n_frames 5 --scene_type indoor --patch_size 256 --train_batch_size 6 --test_batch_size 6 --num_workers 32 --gpu_ids 0 1 3 --in_nc 4 --nc 64 --verbose --G_lr 1e-3 --pixel_loss_type L1 --epochs 1000 --test_step 120 --save_models --bayer_aug --prepare_datasets
+```
+Note to change the stages and the corresponding checkpoints directory for progressive tuning.

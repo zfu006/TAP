@@ -1,8 +1,5 @@
 <p align="center">
   <h1 align="center">Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers</h1>
-   <h3 align="center">
-    <a href="https://arxiv.org/abs/2409.11256" target='_blank'><img src="https://img.shields.io/badge/arXiv-2407.16125-b31b1b.svg"></a>
-  </h3>
   
   <p align="center">
     <a href="https://github.com/zfu006" target="_blank">Zixuan Fu</a>,
@@ -17,6 +14,10 @@
 </p>
 
 This is the official implementation of Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers (ECCV 2024).
+
+<h3 align="left">
+    <a href="https://arxiv.org/abs/2409.11256" target='_blank'><img src="https://img.shields.io/badge/arXiv-2407.16125-b31b1b.svg"></a>
+  </h3>
 
 ## Abstract 
 

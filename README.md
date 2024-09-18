@@ -1,5 +1,8 @@
 <p align="center">
   <h1 align="center">Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers</h1>
+   <h3 align="center">
+    <a href="https://arxiv.org/abs/2409.11256" target='_blank'><img src="https://img.shields.io/badge/arXiv-2407.16125-b31b1b.svg"></a>
+  </h3>
   
   <p align="center">
     <a href="https://github.com/zfu006" target="_blank">Zixuan Fu</a>,
@@ -59,3 +62,7 @@ Run the following command to train video denoiser on CRVD
 python main_finetune_crvd_tap.py --stage 1 --pretrained_checkpoints_dir './checkpoints/nafnet/nafnet_raw.pth' --save_dir ./saves/ft_crvd_indoor/ --test_clean_vid_dir ./Datasets/video_denoising/CRVD_dataset/indoor_raw_gt/ --test_noisy_vid_dir ./Datasets/video_denoising/CRVD_dataset/indoor_raw_noisy/ --n_frames 5 --scene_type indoor --patch_size 256 --train_batch_size 6 --test_batch_size 6 --num_workers 32 --gpu_ids 0 1 3 --in_nc 4 --nc 64 --verbose --G_lr 1e-3 --pixel_loss_type L1 --epochs 1000 --test_step 120 --save_models --bayer_aug --prepare_datasets
 ```
 Note to change the stages and the corresponding checkpoints directory for progressive tuning.
+
+## Reference
+
+Our implementation is based on [KAIR](https://github.com/cszn/KAIR), [RViDeNet](https://github.com/cao-cong/RViDeNet), [NAFNet](https://github.com/megvii-research/NAFNet). We would like to thank them.

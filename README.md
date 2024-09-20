@@ -67,3 +67,14 @@ Note to change the stages and the corresponding checkpoints directory for progre
 ## Reference
 
 Our implementation is based on [KAIR](https://github.com/cszn/KAIR), [RViDeNet](https://github.com/cao-cong/RViDeNet), [NAFNet](https://github.com/megvii-research/NAFNet). We would like to thank them.
+
+## Citation
+
+```
+@article{fu2024temporal,
+  title={Temporal As a Plugin: Unsupervised Video Denoising with Pre-Trained Image Denoisers},
+  author={Fu, Zixuan and Guo, Lanqing and Wang, Chong and Wang, Yufei and Li, Zhihao and Wen, Bihan},
+  journal={arXiv preprint arXiv:2409.11256},
+  year={2024}
+}
+```
